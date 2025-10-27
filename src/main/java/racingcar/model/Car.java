@@ -3,7 +3,7 @@ package racingcar.model;
 import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
-    private static final int MOVE_CONDITION = 4;
+    public static final int MOVE_CONDITION = 4;
     private final String name;
     private int moveCount;
 
