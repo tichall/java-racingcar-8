@@ -4,7 +4,7 @@ import java.util.List;
 
 public class NameExtractor {
     private static final String delimiter = ",";
-    private static final Integer maxLength = 5;
+    private static final int maxLength = 5;
 
     public static List<String> extractName(String input) {
         validateNotEndWithDelimiter(input);
@@ -32,7 +32,7 @@ public class NameExtractor {
     }
 
     private static void validateLength(String name) {
-        if(name.length() > maxLength) {
+        if (name.length() > maxLength) {
             throw new IllegalArgumentException(ExceptionMessage.NAME_LENGTH_EXCEEDED.getValue());
         }
     }
