@@ -1,9 +1,13 @@
 package racingcar.view;
 
 import camp.nextstep.edu.missionutils.Console;
-import racingcar.ExceptionMessage;
+import racingcar.exception.ExceptionMessage;
 
 public class InputView {
+    private InputView() {
+
+    }
+
     public static String readString(String prompt) {
         System.out.println(prompt);
         return Console.readLine();

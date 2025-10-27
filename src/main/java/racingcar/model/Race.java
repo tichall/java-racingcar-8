@@ -2,8 +2,7 @@ package racingcar.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import racingcar.CarFactory;
-import racingcar.ExceptionMessage;
+import racingcar.exception.ExceptionMessage;
 import racingcar.view.OutputView;
 
 public class Race {

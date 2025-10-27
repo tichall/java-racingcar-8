@@ -7,6 +7,8 @@ import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import racingcar.exception.ExceptionMessage;
+import racingcar.model.NameExtractor;
 
 public class NameExtractorTest {
     @DisplayName("extractName은 쉼표를 기준으로 이름을 추출하고 이름 리스트를 반환한다")
@@ -45,7 +47,7 @@ public class NameExtractorTest {
             // when, then
             assertThatThrownBy(() -> NameExtractor.extractName(input))
                     .isInstanceOf(IllegalArgumentException.class)
-                    .hasMessageContaining(ExceptionMessage.NAME_CANNOT_BE_EMPTY.getValue());
+                    .hasMessageContaining(ExceptionMessage.NAME_CANNOT_BE_BLANK.getValue());
         }
 
         @DisplayName("이름이 비어있는 경우")
@@ -57,7 +59,7 @@ public class NameExtractorTest {
             // when, then
             assertThatThrownBy(() -> NameExtractor.extractName(input))
                     .isInstanceOf(IllegalArgumentException.class)
-                    .hasMessageContaining(ExceptionMessage.NAME_CANNOT_BE_EMPTY.getValue());
+                    .hasMessageContaining(ExceptionMessage.NAME_CANNOT_BE_BLANK.getValue());
         }
 
         @DisplayName("이름이 5자를 초과하는 경우")

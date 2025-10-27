@@ -6,6 +6,10 @@ import racingcar.model.Car;
 public class OutputView {
     private static final String MOVE_INDICATOR = "-";
 
+    private OutputView() {
+
+    }
+
     public static void printStartMessage() {
         System.out.println("\n실행 결과");
     }

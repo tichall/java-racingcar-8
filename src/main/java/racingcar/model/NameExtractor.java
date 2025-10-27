@@ -1,10 +1,15 @@
-package racingcar;
+package racingcar.model;
 
 import java.util.List;
+import racingcar.exception.ExceptionMessage;
 
 public class NameExtractor {
     private static final String delimiter = ",";
     private static final int maxLength = 5;
+
+    private NameExtractor() {
+
+    }
 
     public static List<String> extractName(String input) {
         validateNotEndWithDelimiter(input);
@@ -27,7 +32,7 @@ public class NameExtractor {
 
     private static void validateNotBlank(String name) {
         if (name.isBlank()) {
-            throw new IllegalArgumentException(ExceptionMessage.NAME_CANNOT_BE_EMPTY.getValue());
+            throw new IllegalArgumentException(ExceptionMessage.NAME_CANNOT_BE_BLANK.getValue());
         }
     }
 
